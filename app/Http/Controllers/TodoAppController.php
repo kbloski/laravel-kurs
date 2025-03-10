@@ -23,5 +23,7 @@ class TodoAppController extends Controller
         // $task = new Task();
         $task->content = $req->content;
         $task->save();
+
+        return redirect(route('todoapp'));
     }
 }

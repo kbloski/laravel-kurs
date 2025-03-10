@@ -24,6 +24,22 @@ class TodoAppController extends Controller
         $task->content = $req->content;
         $task->save();
 
-        return redirect(route('todoapp'));
+        return redirect()->route('todoapp');
+    }
+
+    public function destroy(Task $task){
+        Log::info($task);
+        $task->delete();
+
+        return redirect()->route('todoapp');
+    }
+
+    public function update(Request $req, Task $task){
+        // Log::info($task);
+        // Log::info($req);
+        
+        $task->content = $req->content;
+        $task->update();
+        
     }
 }

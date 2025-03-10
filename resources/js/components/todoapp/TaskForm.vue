@@ -7,7 +7,7 @@ const form = useForm({
 
 function handleSubmit(){
     form.post(
-        route('todoapp'),
+        route('store'),
         { 
             preserveScroll: true,
             onSuccess: () => {

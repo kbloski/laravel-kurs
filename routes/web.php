@@ -14,6 +14,7 @@ Route::get('dashboard', function () {
 
 // Używanie kontrolerów
 Route::get('todoapp', [TodoAppController::class, 'index'])->name('todoapp');
+Route::post('todoapp', [TodoAppController::class, 'store'])->name('todoapp');
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
